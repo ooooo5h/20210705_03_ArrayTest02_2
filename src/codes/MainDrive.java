@@ -27,10 +27,15 @@ public class MainDrive {
 //		int strikeCount = 0;
 //		int ballCount = 0;
 		
+//		10. 몇번만에 맞췄는지 변수 저장
+		int tryCount = 0;
+		
 		while(true) {
 			
 			System.out.print("숫자를 맞춰보세요 : ");
 			int inputNum = myScan.nextInt();
+			
+			tryCount++;
 			
 //			3. 입력된 숫자를 쪼개서 저장하자
 			
@@ -40,7 +45,7 @@ public class MainDrive {
 			inputNumbers[1] = inputNum / 10 % 10;
 			inputNumbers[2] = inputNum % 10 ;
 			
-//			8. S 와 B 갯수를 변수에 저장하자
+//			8. S 와 B 갯수를 변수에 저장하고 카운팅해주기
 			int strikeCount = 0;
 			int ballCount = 0;		
 			
@@ -67,9 +72,22 @@ public class MainDrive {
 					}		
 				}				
 			}			
-			System.out.println(strikeCount + "S" + ballCount + "B입니다.");
+			
+//			9. 3S면 게임 종료 / 아니면 몇S몇B인지 카운팅해주고 계속 반복
+			if(strikeCount == 3) {
+				System.out.println("축하합니다 정답을 맞추셨습니다.");
+//				10. 몇번만에 맞췄는지 알려주자
+				System.out.println(tryCount + "번만에 맞추셨습니다.");
+				break;
+			}
+			else {
+				System.out.println(strikeCount + "S" + ballCount + "B입니다.");
+			}
+			
 
 		}
+		
+		
 		
 		
 		
