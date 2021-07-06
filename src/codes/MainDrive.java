@@ -20,6 +20,8 @@ public class MainDrive {
 		
 		Scanner myScan = new Scanner(System.in);
 		
+
+		
 		while(true) {
 			
 			System.out.print("숫자를 맞춰보세요 : ");
@@ -33,7 +35,37 @@ public class MainDrive {
 			inputNumbers[1] = inputNum / 10 % 10;
 			inputNumbers[2] = inputNum % 10 ;
 			
+			
+//			4. 내가 입력한 숫자가 랜덤 숫자와 같은 지 반복문 돌리기
+//			[i1, i2, i3 ] 이랑 [r1, r2, r3]
+//			i1 == r1? 
+//			i1 == r2?
+//			i1 == r3?,,,  => 바쁜 반복 (j)
+//			
+//			i1 -> i2 -> i3 -> i1 덜 바쁜 반복 (i)
+			for(int i = 0; i < inputNumbers.length ; i++ ) {
+				for(int j = 0; j < randomNumbers.length ; j++) {
+					
+//					5. 내가 입력한 숫자와 랜덤숫자가 같은가 검사
+					if(inputNumbers[i] == randomNumbers[j]) {
+						if(i == j) {
+//							6. i == j 이면 숫자도 같고 위치도 같음 => S
+								
+						}
+						else {
+//							7. i != j 이면 숫자는 같은데 위치는 다름 => B
 
+							
+						}
+					}
+					
+					
+					
+					
+					
+				}
+				
+			}
 			
 			
 			
