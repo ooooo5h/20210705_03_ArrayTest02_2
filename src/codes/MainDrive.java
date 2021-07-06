@@ -21,8 +21,11 @@ public class MainDrive {
 		Scanner myScan = new Scanner(System.in);
 		
 //		8. S 와 B 갯수를 변수에 저장하자
-		int strikeCount = 0;
-		int ballCount = 0;
+//		 => 여기에 저장하면 안되는 이유 
+//		 => while문 밖에 작성하면 S/B의 갯수가 계속해서 누적된다.
+//		 => 숫자를 입력할때마다 S/B의 갯수가 카운팅되야하므로 while문 안에 작성해야함!!
+//		int strikeCount = 0;
+//		int ballCount = 0;
 		
 		while(true) {
 			
