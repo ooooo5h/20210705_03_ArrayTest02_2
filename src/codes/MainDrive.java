@@ -20,7 +20,9 @@ public class MainDrive {
 		
 		Scanner myScan = new Scanner(System.in);
 		
-
+//		8. S 와 B 갯수를 변수에 저장하자
+		int strikeCount = 0;
+		int ballCount = 0;
 		
 		while(true) {
 			
@@ -50,30 +52,20 @@ public class MainDrive {
 					if(inputNumbers[i] == randomNumbers[j]) {
 						if(i == j) {
 //							6. i == j 이면 숫자도 같고 위치도 같음 => S
-								
+							strikeCount++;										
 						}
 						else {
 //							7. i != j 이면 숫자는 같은데 위치는 다름 => B
-
-							
+							ballCount++;							
 						}
-					}
-					
-					
-					
-					
-					
-				}
-				
-			}
-			
-			
-			
-			
-			
-			
-			
+					}		
+				}				
+			}			
+			System.out.println(strikeCount + "S" + ballCount + "B입니다.");
+
 		}
+		
+		
 		
 		
 	}
