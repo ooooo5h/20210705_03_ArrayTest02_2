@@ -40,6 +40,9 @@ public class MainDrive {
 			inputNumbers[1] = inputNum / 10 % 10;
 			inputNumbers[2] = inputNum % 10 ;
 			
+//			8. S 와 B 갯수를 변수에 저장하자
+			int strikeCount = 0;
+			int ballCount = 0;		
 			
 //			4. 내가 입력한 숫자가 랜덤 숫자와 같은 지 반복문 돌리기
 //			[i1, i2, i3 ] 이랑 [r1, r2, r3]
