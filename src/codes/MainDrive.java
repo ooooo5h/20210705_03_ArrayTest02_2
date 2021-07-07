@@ -8,13 +8,43 @@ public class MainDrive {
 		
 //		숫자 야구 게임을 만들어보자
 		
-//		1.임시로 3자리 숫자를 3칸짜리 배열에 나눠서 저장 ex)741
-		
+//		문제로 출제될 숫자 3개를 저장할 배열		
 		int[] randomNumbers = new int[3];
 		
-		randomNumbers[0] = 7;
-		randomNumbers[1] = 4;
-		randomNumbers[2] = 1;
+//		3칸의 배열에 숫자를 저장할 for문
+		for(int i = 0 ; i < randomNumbers.length ; i++) {
+			
+//			1. 1~9의 숫자만 사용할꺼다 => 1에서 9 중 하나를 랜덤으로 생성(안배운 부분 활용)
+			
+//			2. 중복된 숫자는 막아야함!! => 뽑힌 랜덤 숫자를 사용해도 되는지 검사하자
+		
+//			3. 검사를 통과하면, 배열에 집어넣어주고 아니면 다시 뽑게 로직을 돌리자 = 올바른 숫자가 나올때까지 해당 자리를 다시 뽑자!!
+//			 -> while문을 이용한 무한 반복을 사용해야겠지
+
+			while(true) {
+				
+//				0 < 랜덤값 < 1
+				int randomNum = (int)(Math.random()*9+1);   // 캐스팅
+				
+				boolean isDuplOk = true;
+				
+				for(int num : randomNumbers) {
+//					중복된 숫자를 발견했다 => 더이상 중복 검사 통과가 아닌거지
+					if(randomNum == num) {
+						isDuplOk = false;
+					}			
+				}
+				
+//				만약 중복검사 결과가 true로 유지되어있다면 하나도 중복 안됐다!! = 사용해도 좋은 랜덤값이니
+//				자리에 넣어주자!!
+				if(isDuplOk) {
+					randomNumbers[i] = randomNum;
+					break;
+				}			
+			}
+			
+		}
+
 		
 //		2. 사용자에게 3자리 숫자를 무한히 입력받게끔 하자
 		
